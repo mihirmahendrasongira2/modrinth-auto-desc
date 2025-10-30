@@ -3,11 +3,13 @@ import fs from 'fs/promises';
 import fetch from 'node-fetch';
 import fm from 'yaml-front-matter';
 
-// See: https://docs.modrinth.com/#tag/projects/operation/modifyProject
+//  Demo code
+console.log(" VIVA DEMO code");
+//  Demo code
 
 const removeExcludedSections = (text) => {
-    // Remove sections that are excluded from modrinth description
-    // Placeholder: <!-- MODRINTH_EXCLUDE_START --> ... <!-- MODRINTH_EXCLUDE_END -->
+   
+    
     return text.replace(/<!--\s*MODRINTH_EXCLUDE_START\s*-->[\s\S]*?<!--\s*MODRINTH_EXCLUDE_END\s*-->/g, '');
 }
 
