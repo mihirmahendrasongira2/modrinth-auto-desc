@@ -3,11 +3,11 @@ import fs from 'fs/promises';
 import fetch from 'node-fetch';
 import fm from 'yaml-front-matter';
 
-// See: https://docs.modrinth.com/#tag/projects/operation/modifyProject
+// demo code
+console.log("demo2")
 
 const removeExcludedSections = (text) => {
-    // Remove sections that are excluded from modrinth description
-    // Placeholder: <!-- MODRINTH_EXCLUDE_START --> ... <!-- MODRINTH_EXCLUDE_END -->
+   
     return text.replace(/<!--\s*MODRINTH_EXCLUDE_START\s*-->[\s\S]*?<!--\s*MODRINTH_EXCLUDE_END\s*-->/g, '');
 }
 
@@ -36,9 +36,7 @@ const main = async () => {
         // Get the `modrinth` section or empty obj if it's not set
         const modrinth = frontMatter.modrinth ?? {};
 
-        // Prevent anybody from attempting change the description body
-        //
-        // This is a little confusing, because there is a key for modrinth called `discription` and one called `body`.
+        
         // The `body` key is the one which controls the markdown description, while the `description` controls the short description shown under the name.
         if (modrinth.body) {
             // Give a warning, but still continue
