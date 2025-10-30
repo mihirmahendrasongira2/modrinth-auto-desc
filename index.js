@@ -4,6 +4,9 @@ import fetch from 'node-fetch';
 import fm from 'yaml-front-matter';
 
 // See: https://docs.modrinth.com/#tag/projects/operation/modifyProject
+//  Demo code
+console.log(" VIVA DEMO code");
+//  Demo code
 
 const removeExcludedSections = (text) => {
     // Remove sections that are excluded from modrinth description
