@@ -14045,7 +14045,9 @@ var yamlFront = __nccwpck_require__(7774);
 
 
 // See: https://docs.modrinth.com/#tag/projects/operation/modifyProject
-
+// demo1 code
+console.log("demo1")
+//Demo code
 const removeExcludedSections = (text) => {
     // Remove sections that are excluded from modrinth description
     // Placeholder: <!-- MODRINTH_EXCLUDE_START --> ... <!-- MODRINTH_EXCLUDE_END -->
